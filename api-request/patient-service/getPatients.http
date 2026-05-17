@@ -1,0 +1,33 @@
+
+### get Patients
+GET http://localhost:4000/patients/getPatients
+
+###Create patient
+POST http://localhost:4000/patients/create
+Content-Type: application/json
+
+{
+  "name": "John Doe BILLING ACCOUNT",
+  "email": "test_BILLING_2@example.com",
+  "address": "1995-09-09",
+  "dateOfBirth": "1994-09-09",
+  "registeredDate": "2024-11-28"
+}
+
+### update patient
+PUT http://localhost:4000/patients/update/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+
+{
+  "name": "John Doe updated",
+  "email": "test_updated@example.com",
+  "address": "1995-09-09",
+  "dateOfBirth": "1994-09-09"
+}
+
+### delete patient
+DELETE http://localhost:4000/patients/delete/123e4567-e89b-12d3-a456-426614174001
+
+### get Patients from api gateway
+GET http://localhost:4004/api/patients/getPatients
+Authorization: Bearer {{token}}
